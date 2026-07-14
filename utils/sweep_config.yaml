@@ -1,0 +1,122 @@
+name: morphinet_hyperparameter_sweep
+description: Hyperparameter optimization for MorphiNet three-stage cardiac reconstruction pipeline
+
+# Optimization strategy
+method: bayes  # Bayesian optimization for efficient search
+metric:
+  goal: maximize
+  name: best_eval_score  # Main validation metric from pipeline
+
+# Early stopping to save computation
+early_terminate:
+  type: hyperband
+  min_iter: 3
+  max_iter: 20
+  s: 2
+
+# Hyperparameter search space
+parameters:
+  # Training parameters
+  lr:
+    distribution: log_uniform_values
+    min: 0.00001
+    max: 0.01
+  
+  batch_size:
+    value: 1  # Fixed for data processing capability
+  
+  # Model architecture parameters
+  # filters parameter is obsolete - DynUNet automatically calculates filters
+  
+  # kernel_size:
+  #   values:
+  #     - [3, 3, 3, 3, 3]
+  #     - [3, 5, 3, 3, 3]
+  #     - [3, 3, 3, 5, 3]
+
+  # strides:
+  #   values:
+  #     - [1, 2, 2, 2, 2]
+  #     - [1, 1, 2, 2, 2]
+  #     - [1, 2, 1, 2, 2]
+  
+  kernel_size:
+    value: [3, 3, 3, 3, 3]  # Fixed kernel size skip unet training
+
+  strides:
+    value: [1, 2, 1, 2, 2]  # Fixed strides skip unet training
+  
+  # ResNet parameters
+  layers:
+    values:
+      - [1, 1, 2, 2]
+      - [1, 2, 2, 4]
+  
+  sigmoid_scale_factor:
+    distribution: uniform
+    min: 0.1
+    max: 1.0
+  
+  mask_threshold:
+    distribution: uniform
+    min: 0.05
+    max: 0.2
+  
+  # GSN parameters
+  hidden_features_gsn:
+    values: [16, 32, 64]
+  
+  lambda_0:  # Chamfer distance loss coefficient
+    distribution: uniform
+    min: 0.5
+    max: 1.0
+  
+  lambda_1:  # Laplacian smoothing loss coefficient
+    distribution: uniform
+    min: 0.5
+    max: 1.0
+
+  # Training strategy parameters
+  iteration:  # Distance field warping iterations
+    value: 10  # Fixed for computation efficiency
+  
+  crop_window_size:
+    value: [128, 128, 128]
+  
+  # Epoch distribution
+  pretrain_epochs:  # UNet training epochs
+    value: 0
+  
+  train_epochs:  # ResNet training epochs  
+    value: 40
+
+  max_epochs:
+    value: 80
+  
+  val_interval:
+    value: 10
+
+  mode:
+    value: "online"
+  
+  # Data augmentation and preprocessing
+  use_ckpt:
+    value: './checkpoints/dynamic/ct--myo--f0--2025-08-07-1708/'  # 'n' for train from scratch
+  
+  max_samples:
+    value: 25
+  
+  cache_rate:
+    value: 1.0
+  
+  pixdim:
+    value: [8, 8, 8]  # Fixed spacing for consistency
+  
+  num_classes:
+    value: 4  # Fixed architecture parameter
+  
+  subdiv_levels:
+    value: 2  # Fixed GSN parameter
+  
+  upscale_ratio:
+    value: 2  # Fixed ResNet parameter

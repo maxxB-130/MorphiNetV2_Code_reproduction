@@ -1,0 +1,94 @@
+*/
+*.vtk
+*.vtp
+*.vtu
+*.lon
+*.elem
+*.mesh
+*.nii.gz
+*.dcm
+*.nrrd
+*.json
+*.pth
+*.tar.gz
+*.obj
+
+/paper_explain_for_code/release/
+/dataset/
+/results/
+/results_optional_label_smoke/
+/results_single_no_label_compare/
+/results_single_no_label_intermediates/
+/results_single_no_label_test/
+/results_single_with_label_compare/
+/results_single_with_label_intermediates/
+/results_acdc_label_align/
+/results_acdc_label_align_meshonly/
+/results_acdc_single_label_meshonly/
+
+
+
+/release/
+/results_self/
+!/codex_record/
+# Utils and Rasterizer
+!/utils/
+/utils/*
+!/utils/*.py
+!/utils/rasterize/
+/utils/rasterize/*
+!/utils/rasterize/*.py
+!/utils/rasterize/*.cpp
+!/utils/rasterize/*.cu
+!/utils/path_config.py
+!/utils/process_nrrd_slices.py
+!/utils/update_dataset_json.py
+!/utils/testing/
+!/utils/testing/*.py
+
+# Data-loader
+!/data
+!/data/
+!/data/*.py
+!/data/utils/
+!/data/utils/*.py
+
+# Pipeline
+!/pipeline/
+!/pipeline/*.py
+
+# Networks
+!/model
+
+# Training Loop
+!/training
+
+# Evaluation
+!/evaluation
+
+# Template assets: meshes are tracked; anchor NIfTIs come from the v1.01 release, not the repo
+!/template/
+/template/*
+!/template/*.obj
+!/template/*.txt
+
+# Orientation helper (tools/)
+!/tools/
+/tools/*
+!/tools/*.ipynb
+!/tools/*.py
+!/tools/*.md
+
+# README and others
+!figure/
+!README.md
+!codex_record/record0618.md
+!LICENSE
+!main.py
+!run.py
+!sweep_agent.py
+!control.sh
+!install_morphinet.sh
+!run_sweep.sh
+!sweep_config.yaml
+!environment.yml
