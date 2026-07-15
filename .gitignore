@@ -26,7 +26,7 @@
 /results_acdc_label_align_meshonly/
 /results_acdc_single_label_meshonly/
 
-
+!/dataset/Dataset021_ACDC_SINGLE_LABEL/
 
 /release/
 /results_self/
