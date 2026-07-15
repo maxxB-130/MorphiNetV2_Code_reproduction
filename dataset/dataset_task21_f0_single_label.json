@@ -1,0 +1,27 @@
+{
+  "name": "Dataset021_ACDC_SINGLE_LABEL",
+  "description": "ACDC cine SAX image and label frames prepared for MorphiNet inference/evaluation",
+  "tensorImageSize": "3D",
+  "reference": "local",
+  "licence": "n/a",
+  "release": "n/a",
+  "modality": {
+    "0": "MR"
+  },
+  "labels": {
+    "0": "background",
+    "1": "lv",
+    "2": "lv-myo",
+    "3": "rv",
+    "4": "rv-myo"
+  },
+  "training": [],
+  "numTraining": 0,
+  "test": [
+    {
+      "image": "./imagesTs/acdc_anchor_0000.nii.gz",
+      "label": "./labelsTs/acdc_anchor.nii.gz"
+    }
+  ],
+  "numTest": 1
+}

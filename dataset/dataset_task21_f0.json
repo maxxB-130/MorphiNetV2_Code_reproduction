@@ -1,0 +1,87 @@
+{
+  "name": "Dataset021_ACDC_LABEL_ALIGN",
+  "description": "ACDC cine SAX image and label frames prepared for MorphiNet inference/evaluation",
+  "tensorImageSize": "3D",
+  "reference": "local",
+  "licence": "n/a",
+  "release": "n/a",
+  "modality": {
+    "0": "MR"
+  },
+  "labels": {
+    "0": "background",
+    "1": "lv",
+    "2": "lv-myo",
+    "3": "rv",
+    "4": "rv-myo"
+  },
+  "training": [],
+  "numTraining": 0,
+  "test": [
+    {
+      "image": "./imagesTs/A0S9V9_frame00_0000.nii.gz",
+      "label": "./labelsTs/A0S9V9_frame00.nii.gz"
+    },
+    {
+      "image": "./imagesTs/A0S9V9_frame09_0000.nii.gz",
+      "label": "./labelsTs/A0S9V9_frame09.nii.gz"
+    },
+        {
+      "image": "./imagesTs/A1D0Q7_frame00_0000.nii.gz",
+      "label": "./labelsTs/A1D0Q7_frame00.nii.gz"
+    },
+    {
+      "image": "./imagesTs/A1D0Q7_frame09_0000.nii.gz",
+      "label": "./labelsTs/A1D0Q7_frame09.nii.gz"
+    },
+        {
+      "image": "./imagesTs/A1E9Q1_frame00_0000.nii.gz",
+      "label": "./labelsTs/A1E9Q1_frame00.nii.gz"
+    },
+    {
+      "image": "./imagesTs/A1E9Q1_frame09_0000.nii.gz",
+      "label": "./labelsTs/A1E9Q1_frame09.nii.gz"
+    },
+        {
+      "image": "./imagesTs/A2C0I1_frame00_0000.nii.gz",
+      "label": "./labelsTs/A2C0I1_frame00.nii.gz"
+    },
+    {
+      "image": "./imagesTs/A2C0I1_frame07_0000.nii.gz",
+      "label": "./labelsTs/A2C0I1_frame07.nii.gz"
+    },
+        {
+      "image": "./imagesTs/A2N8V0_frame00_0000.nii.gz",
+      "label": "./labelsTs/A2N8V0_frame00.nii.gz"
+    },
+    {
+      "image": "./imagesTs/A2N8V0_frame09_0000.nii.gz",
+      "label": "./labelsTs/A2N8V0_frame09.nii.gz"
+    },
+        {
+      "image": "./imagesTs/B0H7V0_frame00_0000.nii.gz",
+      "label": "./labelsTs/B0H7V0_frame00.nii.gz"
+    },
+    {
+      "image": "./imagesTs/B0H7V0_frame09_0000.nii.gz",
+      "label": "./labelsTs/B0H7V0_frame09.nii.gz"
+    },
+        {
+      "image": "./imagesTs/C4E9I1_frame00_0000.nii.gz",
+      "label": "./labelsTs/C4E9I1_frame00.nii.gz"
+    },
+    {
+      "image": "./imagesTs/C4E9I1_frame08_0000.nii.gz",
+      "label": "./labelsTs/C4E9I1_frame08.nii.gz"
+    },
+        {
+      "image": "./imagesTs/C6E0F9_frame00_0000.nii.gz",
+      "label": "./labelsTs/C6E0F9_frame00.nii.gz"
+    },
+    {
+      "image": "./imagesTs/C6E0F9_frame08_0000.nii.gz",
+      "label": "./labelsTs/C6E0F9_frame08.nii.gz"
+    }
+  ],
+  "numTest": 16
+}

@@ -5,7 +5,7 @@
 !/dataset/Dataset021_ACDC_SINGLE_LABEL/labelsTs/
 /dataset/Dataset021_ACDC_LABEL_ALIGN/
 
-*/
+#*/
 *.nii.gz
 
 # Utils and Rasterizer
