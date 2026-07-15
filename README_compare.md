@@ -9,8 +9,11 @@ Project-specific paths will be set in the inference stage, there is nothing need
 ## Dataset Preparation
 
 No modification need. Just prepare a folder named `Dataset021_ACDC_SINGLE_LABEL` under folder `dataset`. 
+
 Put `acdc_anchor_image.nii.gz` into `Dataset021_ACDC_SINGLE_LABEL/imagesTs` and `acdc_anchor_label.nii.gz` into `Dataset021_ACDC_SINGLE_LABEL/labelsTs` respectively.
+
 Note: I renamed `acdc_anchor_image.nii.gz` as `acdc_anchor_0000.nii.gz` and `acdc_anchor_label.nii.gz` as `acdc_anchor.nii.gz`
+
 The corresponding JSON file is `dataset_task21_f0_single_label.json`.
 
 ## Usage
