@@ -8,7 +8,7 @@
 *.nii.gz
 *.dcm
 *.nrrd
-*.json
+#*.json
 *.pth
 *.tar.gz
 *.obj
