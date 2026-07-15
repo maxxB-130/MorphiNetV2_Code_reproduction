@@ -14,7 +14,7 @@
 *.obj
 
 /paper_explain_for_code/release/
-/dataset/
+
 /results/
 /results_optional_label_smoke/
 /results_single_no_label_compare/
